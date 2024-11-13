@@ -1,5 +1,5 @@
-import Header from './components/Header';
-import Counter from './components/Counter';
+import Counter from "./components/Counter";
+import Header from "./components/Header";
 
 function App(){
   return (
@@ -9,6 +9,5 @@ function App(){
     </div>
   );
 }
-
 
 export default App
