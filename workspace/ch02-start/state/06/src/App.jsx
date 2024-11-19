@@ -38,6 +38,10 @@ function App() {
             minLength: {
               value: 2,
               message: '2글자 이상 입력하세요.'
+            },
+            pattern: {
+              value: /^[^\d]*$/, // 숫자는 포함할수 없음
+              message: '숫자는 입력할 수 없습니다.'
             }
           }) }
         /><br/>
