@@ -53,14 +53,14 @@ function Counter({ children = '0' }){
   //   console.log('dependencies에 값을 지정하면 컴포넌트가 업데이트 될때 지정한 값중 하나라도 수정되었을 경우 호출됨')
   // }, [step])
 
-  useEffect(() => {
+  useEffect(() => { // setup
     console.log('setup 함수 호출.')
     const timer = setInterval(() => {
       console.log(new Date())
     }, 1000)
     return () => {
-      clearInterval(timer)
-    }
+      clearInterval(timer) 
+    } //cleanup
   }, [])
 
   // useEffect(() => {
