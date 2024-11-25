@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom"
 
 function Layout() {
   return (
-    <div className="">
+    <div className="todoapp">
       <Header />
 
       <Outlet />
