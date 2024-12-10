@@ -18,8 +18,8 @@ const router = createBrowserRouter([
       { path: ':type/new', element: <New /> },
       { path: ':type/:_id', element: <Detail /> },
       { path: ':type/:_id/edit', element: <Edit /> },
-      { path: 'users/login', element: <Login /> },
       { path: 'users/signup', element: <Signup /> },
+      { path: 'users/login', element: <Login /> },
     ]
   },
 ], {

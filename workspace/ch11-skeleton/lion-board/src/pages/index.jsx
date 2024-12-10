@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
 export default function MainPage() {
-
   return (
     <main className="container mx-auto mt-10 p-4 transition-color">
       <section className="text-center">
@@ -30,7 +29,6 @@ export default function MainPage() {
           </div>
         </div>
       </section>
-    </main>
-  )
+    </main>      
+  );
 }
-

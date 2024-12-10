@@ -17,7 +17,7 @@ export default function CommentListItem() {
           <pre className="whitespace-pre-wrap text-sm">화이팅!</pre>
           <button type="submit" className="bg-red-500 py-1 px-2 text-sm text-white font-semibold ml-2 hover:bg-amber-400 rounded">삭제</button>
         </form>
-      </div>  
+      </div>
     </div>
-  )
+  );
 }

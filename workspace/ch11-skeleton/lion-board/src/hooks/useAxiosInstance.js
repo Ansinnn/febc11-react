@@ -2,16 +2,18 @@ import axios from "axios";
 
 function useAxiosInstance() {
   const instance = axios.create({
-    baseURL: 'https://todo-api.fesp.shop/api',
+    baseURL: 'https://11.fesp.shop',
     timeout: 1000*15,
     headers: {
       'Content-Type': 'application/json', // request의 데이터 타입
       accept: 'application/json', // response의 데이터 타입
+      'client-id': '00-brunch',
     }
   });
 
   // 요청 인터셉터 추가하기
   instance.interceptors.request.use((config) => {
+    config.headers['Authorization'] = `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOjI5LCJ0eXBlIjoidXNlciIsIm5hbWUiOiLsmqnsjKQiLCJlbWFpbCI6ImFhQGFhLmFhIiwibG9naW5UeXBlIjoiZW1haWwiLCJpYXQiOjE3MzM3MjU1NTcsImV4cCI6MTczMzgxMTk1NywiaXNzIjoiRkVTUCJ9.Wzz1hfItsn5wt2vjwjKpNdCgf4HKDTL-fE7pbqr0is4`;
     // 요청이 전달되기 전에 필요한 공통 작업 수행
     config.params = {
       delay: 500,

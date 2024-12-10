@@ -11,5 +11,5 @@ export default function CommentList() {
       <CommentNew />
 
     </section>
-  )
+  );
 }

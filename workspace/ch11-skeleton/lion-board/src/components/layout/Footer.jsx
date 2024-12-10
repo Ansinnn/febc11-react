@@ -16,5 +16,5 @@ export default function Footer() {
         <Link to="#" className="hover:font-semibold dark:hover:text-gray-200">고객센터</Link>
       </div>
     </footer>
-  )
+  );
 }

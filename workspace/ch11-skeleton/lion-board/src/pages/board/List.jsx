@@ -1,31 +1,30 @@
-import useAxiosInstance from "@hooks/useAxiosInstance";
 import ListItem from "@pages/board/ListItem";
+import { Link, useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
-import { Link } from "react-router-dom";
-
-
-// function fetchPosts(){
-
-// }
+import useAxiosInstance from "@hooks/useAxiosInstance";
 
 export default function List() {
 
-  const axios = useAxiosInstance()
+  const axios = useAxiosInstance();
 
-  const { data, isLoading, erorr } = useQuery({
-    queryKey: ['posts', 'brunch'],
-    queryFn: () => axios.get('/posts', { params: { type: 'brunch'}}),
+  // /:type
+  // localhost/info => useParams()의 리턴값 { type: info }
+  const { type } = useParams();
+
+  const { data } = useQuery({
+    queryKey: ['posts', type],
+    queryFn: () => axios.get('/posts', { params: { type } }),
     select: res => res.data,
     staleTime: 1000*10,
-  })
+  });
 
-  console.log(data)
-  
+  console.log(data);
+
   if(!data){
-    return <div>로딩중...</div>
+    return <div>로딩중...</div>;
   }
 
-  const list = data.item.map(item => <ListItem key={item._id} item={ item } />)
+  const list = data.item.map(item => <ListItem key={item._id} item={ item } />);
 
   return (
     <main className="min-w-80 p-10">
@@ -43,7 +42,7 @@ export default function List() {
           <button type="submit" className="bg-orange-500 py-1 px-4 text-base text-white font-semibold ml-2 hover:bg-amber-400 rounded">검색</button>
         </form>
 
-        <Link to="/info/new" className="bg-orange-500 py-1 px-4 text-base text-white font-semibold ml-2 hover:bg-amber-400 rounded">글작성</Link>
+        <Link to="new" className="bg-orange-500 py-1 px-4 text-base text-white font-semibold ml-2 hover:bg-amber-400 rounded">글작성</Link>
       </div>
       <section className="pt-10">
         <table className="border-collapse w-full table-fixed">
@@ -83,7 +82,10 @@ export default function List() {
             </li>
           </ul>
         </div>
+
+
+
       </section>
     </main>
-  )
+  );
 }
