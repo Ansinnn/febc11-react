@@ -1,4 +1,5 @@
 // 06-04.js 복사
+<<<<<<< HEAD
 function f1(resolve, reject){
   return new Promise((resolve, reject)=>{
     console.log(`2. f1 작업 시작.`);
@@ -39,3 +40,6 @@ async function test(){
 console.log('1. 테스트 시작.');
 test();
 console.log('9. 테스트 완료.');
+=======
+
+>>>>>>> df2a7dd0b09a988f8176a637bfbac011163e4d77

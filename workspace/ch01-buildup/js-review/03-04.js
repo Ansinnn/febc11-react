@@ -4,6 +4,7 @@ var itemList = [
   { no: 3, todo: '라면', done: false},
 ];
 
+<<<<<<< HEAD
 // 1. 대입 연산자
 var newItemList = itemList
 
@@ -18,3 +19,5 @@ newItemList[1].done = true
 console.log(itemList, newItemList)
 console.log( itemList===newItemList)
 console.log( itemList[1]===newItemList[1])
+=======
+>>>>>>> df2a7dd0b09a988f8176a637bfbac011163e4d77

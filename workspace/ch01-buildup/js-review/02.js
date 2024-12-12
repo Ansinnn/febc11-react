@@ -7,6 +7,7 @@ var itemList = [
 console.log(itemList[0]);
 console.log(itemList[1]);
 
+<<<<<<< HEAD
 var [first, second] = itemList;
 console.log(first);
 console.log(second);
@@ -33,3 +34,5 @@ function Button( color, type, onClick){
 
 }
 
+=======
+>>>>>>> df2a7dd0b09a988f8176a637bfbac011163e4d77

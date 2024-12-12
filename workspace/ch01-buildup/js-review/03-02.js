@@ -1,5 +1,6 @@
 var item = { no: 1, todo: '두부', done: true };
 
+<<<<<<< HEAD
 // 1. 대입 연산자로 newItem 생성
 var newItem = item
 
@@ -18,3 +19,5 @@ var newItem = {...item, done: false}
 // newItem.done = false
 console.log(item, newItem)
 console.log('같은 객체인가?', item === newItem)
+=======
+>>>>>>> df2a7dd0b09a988f8176a637bfbac011163e4d77

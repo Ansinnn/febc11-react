@@ -1,9 +1,14 @@
 // 지정한 수가 소수인지 여부를 반환
+<<<<<<< HEAD
 var isPrime2 = function(num){
+=======
+var isPrime = function(num){
+>>>>>>> df2a7dd0b09a988f8176a637bfbac011163e4d77
   console.time('소요 시간');
   console.log('소수 판별 시작.', num);
 
   // TODO: 소수 판별 코드
+<<<<<<< HEAD
   let prime = num > 1; // 1은 소수가 아님
 
   for(let i=2; i<num; i++){
@@ -12,12 +17,17 @@ var isPrime2 = function(num){
       break
     }
   }
+=======
+  let prime = true;
+
+>>>>>>> df2a7dd0b09a988f8176a637bfbac011163e4d77
 
   console.log('소수 판별 결과.', prime);
   console.timeEnd('소요 시간');
   return prime;
 };
 
+<<<<<<< HEAD
 // var isPrime = function(num){
 //   // 캐시를 위한 코드
 //   isPrime._cache = isPrime._cache || {}
@@ -45,6 +55,8 @@ function memo(fn){
 
 // var isPrime = memo(isPrime); // memoization 기능 추가
 
+=======
+>>>>>>> df2a7dd0b09a988f8176a637bfbac011163e4d77
 isPrime(1);
 isPrime(2);
 isPrime(3);
@@ -54,6 +66,10 @@ isPrime(6);
 isPrime(7);
 isPrime(8);
 isPrime(9);
+<<<<<<< HEAD
 isPrime(1000000007); //십억칠
+=======
+isPrime(1000000007);
+>>>>>>> df2a7dd0b09a988f8176a637bfbac011163e4d77
 isPrime(1000000007);
 isPrime(1000000007);
