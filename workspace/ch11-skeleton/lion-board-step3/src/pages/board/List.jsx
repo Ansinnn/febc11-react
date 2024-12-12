@@ -88,9 +88,6 @@ export default function List() {
             </li>
           </ul>
         </div>
-
-
-
       </section>
     </main>
   );
