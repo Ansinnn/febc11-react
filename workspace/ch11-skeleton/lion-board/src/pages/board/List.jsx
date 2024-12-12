@@ -7,7 +7,6 @@ import useUserStore from "@zustand/userStore";
 export default function List() {
 
   const axios = useAxiosInstance();
-
   const { user } = useUserStore();
 
   // /:type
