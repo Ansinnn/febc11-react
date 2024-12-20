@@ -1,4 +1,24 @@
+import './globals.css'
+import Link from "next/link";
 
+export const metadata = {
+  title: {
+    default: '멋쟁이 사자처럼 커뮤니티 - 멋사컴즈',
+    template: '%s | 멋사컴즈',
+  },
+  description: "다양한 주제의 커뮤니티와 활발한 소통을 위한 플랫폼입니다",
+  keywords: "커뮤니티, 소통, 포럼, 관심사, 온라인 모임, 커뮤니티 서비스",
+  author: [{name: "Front End Boot Camp"}],
+
+  openGraph: {
+    title: "멋사컴에 오신걸 환영합니다.",
+    description: "",
+    images: ["/images/febc.png"],
+    url: "https://board.fesp.shop",
+    type: "website",
+    siteName: "멋사컴즈",
+  }
+}
 export default function RootLayout({ children }) {
   return (
     <html lang="ko">
@@ -6,7 +26,7 @@ export default function RootLayout({ children }) {
         <meta charset="UTF-8" />
         <link rel="icon" type="image/x-icon" href="/images/favicon.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>멋쟁이 사자처럼 커뮤니티 - 멋사컴</title>
+        <title>멋사컴</title>
 
         <meta name="description" content="다양한 주제의 커뮤니티와 활발한 소통을 위한 플랫폼입니다. 관심사에 따라 참여하고, 의견을 나누세요." />
         <meta name="keywords" content="커뮤니티, 소통, 포럼, 관심사, 온라인 모임, 커뮤니티 서비스" />
@@ -30,24 +50,24 @@ export default function RootLayout({ children }) {
             <header class="px-8 min-w-80 bg-slate-100 dark:bg-gray-600 text-gray-800 dark:text-gray-200 transition-color duration-500 ease-in-out">
               <nav class="flex flex-wrap justify-center items-center p-4 md:flex-nowrap md:justify-between">
                 <div class="w-1/2 order-1 md:w-auto">
-                  <a href="/" class="flex items-center gap-2">
+                  <Link href="/" class="flex items-center gap-2">
                     <img class="mr-3 h-6 sm:h-9" src="/images/favicon.svg" width="40" height="40" alt="로고 이미지" />
                     <span class="text-lg font-bold">멋사컴</span>
-                  </a>
+                  </Link>
                 </div>
                 <div class="w-auto order-2 text-base mt-4 md:mt-0">
                   <ul class="flex items-center gap-6 uppercase">
-                    <li class="hover:text-amber-500 hover:font-semibold"><a href="/info">정보공유</a></li>
-                    <li class="hover:text-amber-500 hover:font-semibold"><a href="/free">자유게시판</a></li>
-                    <li class="hover:text-amber-500 a:font-semibold"><a href="/qna">질문게시판</a></li>
+                    <li class="hover:text-amber-500 hover:font-semibold"><Link href="/info">정보공유</Link></li>
+                    <li class="hover:text-amber-500 hover:font-semibold"><Link href="/free">자유게시판</Link></li>
+                    <li class="hover:text-amber-500 a:font-semibold"><Link href="/qna">질문게시판</Link></li>
                   </ul>
                 </div>
 
                 <div class="w-1/2 order-1 flex justify-end items-center md:order-2 md:w-auto">
 
                   <div class="flex justify-end">
-                    <a href="/user/login" class="bg-orange-500 py-1 px-2 text-sm text-white font-semibold ml-2 hover:bg-amber-400 rounded">로그인</a>
-                    <a href="/user/signup" class="bg-gray-900 py-1 px-2 text-sm text-white font-semibold ml-2 hover:bg-amber-400 rounded">회원가입</a>
+                    <Link href="/user/login" class="bg-orange-500 py-1 px-2 text-sm text-white font-semibold ml-2 hover:bg-amber-400 rounded">로그인</Link>
+                    <Link href="/user/signup" class="bg-gray-900 py-1 px-2 text-sm text-white font-semibold ml-2 hover:bg-amber-400 rounded">회원가입</Link>
                   </div>
 
                   <button
@@ -86,7 +106,7 @@ export default function RootLayout({ children }) {
               <section class="text-center">
                 <h1 class="text-4xl font-bold mb-4">멋사컴에 오신 것을 환영합니다!</h1>
                 <p class="text-xl mb-6">다양한 주제의 커뮤니티와 활발한 소통을 위한 플랫폼입니다. 관심사에 따라 참여하고, 의견을 나누세요.</p>
-                <a href="/" class="bg-orange-500 text-white px-6 py-3 rounded hover:bg-orange-600">커뮤니티 참여하기</a>
+                <Link href="/" class="bg-orange-500 text-white px-6 py-3 rounded hover:bg-orange-600">커뮤니티 참여하기</Link>
               </section>
         
               <section class="mt-16">
@@ -95,17 +115,17 @@ export default function RootLayout({ children }) {
                   <div class="bg-white p-6 rounded shadow dark:bg-gray-800">
                     <h3 class="text-xl font-bold mb-2">정보 공유</h3>
                     <p class="mb-4">다양한 정보와 지식을 공유하세요.</p>
-                    <a href="/info" class="text-orange-500 hover:underline">바로가기</a>
+                    <Link href="/info" class="text-orange-500 hover:underline">바로가기</Link>
                   </div>
                   <div class="bg-white p-6 rounded shadow dark:bg-gray-800">
                     <h3 class="text-xl font-bold mb-2">자유 게시판</h3>
                     <p class="mb-4">자유롭게 이야기를 나누세요.</p>
-                    <a href="/free" class="text-orange-500 hover:underline">바로가기</a>
+                    <Link href="/free" class="text-orange-500 hover:underline">바로가기</Link>
                   </div>
                   <div class="bg-white p-6 rounded shadow dark:bg-gray-800">
                     <h3 class="text-xl font-bold mb-2">질문 게시판</h3>
                       <p class="mb-4">궁금한 점을 질문하고 답변을 받아보세요.</p>
-                    <a href="/qna" class="text-orange-500 hover:underline">바로가기</a>
+                    <Link href="/qna" class="text-orange-500 hover:underline">바로가기</Link>
                   </div>
                 </div>
               </section>
@@ -113,16 +133,16 @@ export default function RootLayout({ children }) {
             
             <footer class="p-4 pb-12 w-full border-t border-t-slate-200  dark:border-t-slate-500 dark:bg-gray-600 text-gray-600 dark:text-white transition-color duration-500 ease-in-out">
               <div class="min-w-[320px] flex flex-wrap gap-4 justify-center items-center text-sm text-slate-400">
-                <a href="#" class="hover:font-semibold dark:hover:text-gray-200">약관</a>
-                <a href="#" class="hover:font-semibold dark:hover:text-gray-200">게시판 정책</a>
-                <a href="#" class="hover:font-semibold dark:hover:text-gray-200">회사소개</a>
-                <a href="#" class="hover:font-semibold dark:hover:text-gray-200">광고</a>
-                <a href="#" class="hover:font-semibold dark:hover:text-gray-200">마이비즈니스</a>
-                <a href="#" class="hover:font-semibold dark:hover:text-gray-200">제휴 제안</a>
-                <a href="#" class="hover:font-semibold dark:hover:text-gray-200">이용약관</a>
-                <a href="#" class="hover:font-semibold dark:hover:text-gray-200">개인정보취급방침</a>
-                <a href="#" class="hover:font-semibold dark:hover:text-gray-200">청소년보호 정책</a>
-                <a href="#" class="hover:font-semibold dark:hover:text-gray-200">고객센터</a>
+                <Link href="#" class="hover:font-semibold dark:hover:text-gray-200">약관</Link>
+                <Link href="#" class="hover:font-semibold dark:hover:text-gray-200">게시판 정책</Link>
+                <Link href="#" class="hover:font-semibold dark:hover:text-gray-200">회사소개</Link>
+                <Link href="#" class="hover:font-semibold dark:hover:text-gray-200">광고</Link>
+                <Link href="#" class="hover:font-semibold dark:hover:text-gray-200">마이비즈니스</Link>
+                <Link href="#" class="hover:font-semibold dark:hover:text-gray-200">제휴 제안</Link>
+                <Link href="#" class="hover:font-semibold dark:hover:text-gray-200">이용약관</Link>
+                <Link href="#" class="hover:font-semibold dark:hover:text-gray-200">개인정보취급방침</Link>
+                <Link href="#" class="hover:font-semibold dark:hover:text-gray-200">청소년보호 정책</Link>
+                <Link href="#" class="hover:font-semibold dark:hover:text-gray-200">고객센터</Link>
               </div>
             </footer>
 

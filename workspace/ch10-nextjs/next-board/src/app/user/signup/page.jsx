@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 export default function Page() {
   return (
@@ -57,7 +58,7 @@ export default function Page() {
   
             <div class="mt-10 flex justify-center items-center">
               <button type="submit" class="bg-orange-500 py-1 px-4 text-base text-white font-semibold ml-2 hover:bg-amber-400 rounded">회원가입</button>
-              <a href="/" class="bg-gray-900 py-1 px-4 text-base text-white font-semibold ml-2 hover:bg-amber-400 rounded">취소</a>
+              <Link href="/" class="bg-gray-900 py-1 px-4 text-base text-white font-semibold ml-2 hover:bg-amber-400 rounded">취소</Link>
             </div>
           </form>
         </div>
